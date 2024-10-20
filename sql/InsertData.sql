@@ -57,11 +57,13 @@ VALUES
 (10, 'Tate Modern', 'Modern and contemporary art gallery.', 'London, UK', 9, '11:00:00');
 
 -- Insert data into User_Favorite_Artwork table
-INSERT INTO User_Favorite_Artwork (UserID, ArtworkID) VALUES
+INSERT INTO User_Favorite_Artwork (UserID, ArtworkID)
+VALUES
 (1, 1), (1, 2), (2, 3), (3, 5), (4, 2),
 (5, 6), (6, 9), (7, 10), (8, 7), (9, 3);
 
 -- Insert data into Artwork_Gallery table
-INSERT INTO Artwork_Gallery (ArtworkID, GalleryID) VALUES
+INSERT INTO Artwork_Gallery (ArtworkID, GalleryID)
+VALUES
 (1, 2), (2, 1), (3, 4), (4, 5), (5, 6),
 (6, 9), (7, 6), (8, 7), (9, 3), (10, 10);

@@ -26,4 +26,22 @@ public class DBConnUtil {
         }
         return connection;
     }
+
+    /**
+     * Closes the database connection if it is open.
+     * Ensures that the connection is properly released when no longer needed.
+    */
+    public static void dbClose() {
+
+        try {
+
+            if (connection != null) {
+                
+                connection.close();
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
