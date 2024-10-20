@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS `virtualart`;
 USE virtualart;
 
 CREATE TABLE Artwork (
-    ArtworkID INT AUTO_INCREMENT PRIMARY KEY,
+    ArtworkID INT PRIMARY KEY,
     Title VARCHAR(255) NOT NULL,
     Description TEXT,
     CreationDate DATE NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE Artwork (
 );
 
 CREATE TABLE Artist (
-    ArtistID INT AUTO_INCREMENT PRIMARY KEY,
+    ArtistID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Biography TEXT,
     BirthDate DATE NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Artist (
 );
 
 CREATE TABLE User (
-    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT PRIMARY KEY,
     Username VARCHAR(100) NOT NULL UNIQUE,
     Password VARCHAR(255) NOT NULL,
     Email VARCHAR(100) NOT NULL UNIQUE,
@@ -37,7 +37,7 @@ CREATE TABLE User (
 );
 
 CREATE TABLE Gallery (
-    GalleryID INT AUTO_INCREMENT PRIMARY KEY,
+    GalleryID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Description TEXT,
     Location VARCHAR(255) NOT NULL,
@@ -68,3 +68,9 @@ SELECT * FROM Artwork;
 SELECT * FROM Artist;
 SELECT * FROM User;
 SELECT * FROM Gallery;
+
+DROP DATABASE IF EXISTS `virtualart`;
+DROP TABLE Artwork;
+DROP TABLE Artist;
+DROP TABLE User;
+DROP TABLE Gallery;
